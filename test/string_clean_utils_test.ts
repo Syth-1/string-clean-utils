@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import { StringCleanUtils } from "../string_clean_utils";
+import { StringCleanUtils } from "../";
 
 test('Replaces diacritics & accents with original', () => {
     const normalized = StringCleanUtils.normalize('𝒉𝒂𝒓𝒍𝒆𝒚𝒔 𝒊𝒏 𝒉𝒂𝒘𝒂𝒊𝒊 - 𝒌𝒂𝒕𝒚 𝒑𝒆𝒓𝒓𝒚');
