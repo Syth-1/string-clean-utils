@@ -1,6 +1,10 @@
 /// original map credits for [jonschlinkert](https://www.npmjs.com/package/diacritics-map)
 /// repo: https://github.com/jonschlinkert/diacritics-map/blob/master/index.js
 
+import { cyrillicLookup } from "./Cyrillic";
+
+const INCLUDE_CYRILLIC = true;
+
 export const diacriticsMap = {
   '«': '"',
   '²': '2',
@@ -1243,5 +1247,7 @@ export const diacriticsMap = {
   'ｚ': 'z',
   '｛': '{',
   '｝': '}',
-  '～': '~'
+  '～': '~',
+
+  ...(INCLUDE_CYRILLIC ? cyrillicLookup : {})
 };
